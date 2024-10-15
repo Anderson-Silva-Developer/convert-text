@@ -1,21 +1,17 @@
-# Dockerfile
-
-FROM ubuntu:latest AS build
+FROM ubuntu:20.04 AS build
 
 RUN apt-get update && apt-get install -y \
     openjdk-21-jdk \
     wget \
     unzip \
     python3 \
-    python3-pip \
-    python3-venv
+    python3-pip
 
-# Criar e ativar um ambiente virtual
-RUN python3 -m venv /opt/venv
-ENV PATH="/opt/venv/bin:$PATH"
 
-# Instalar yt-dlp no ambiente virtual
-RUN pip install yt-dlp
+RUN pip3 install yt-dlp
+
+# Verificar a instalação de yt-dlp
+RUN /opt/venv/bin/yt-dlp --version
 
 # Instalar Gradle 8.2.1
 RUN wget https://services.gradle.org/distributions/gradle-8.2.1-bin.zip -P /tmp
