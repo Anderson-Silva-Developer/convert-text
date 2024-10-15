@@ -1,4 +1,4 @@
-package br.com.anderson.silva.apigetvideo.dto;
+package br.com.anderson.silva.apiconvert.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

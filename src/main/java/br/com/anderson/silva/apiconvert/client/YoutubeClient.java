@@ -1,6 +1,6 @@
-package br.com.anderson.silva.apigetvideo.client;
+package br.com.anderson.silva.apiconvert.client;
 
-import br.com.anderson.silva.apigetvideo.dto.VideoDTO;
+import br.com.anderson.silva.apiconvert.dto.VideoDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

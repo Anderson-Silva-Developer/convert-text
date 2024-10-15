@@ -1,4 +1,4 @@
-package br.com.anderson.silva.apigetvideo.controller;
+package br.com.anderson.silva.apiconvert.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('converterForm');
-    const resultadoDiv = document.getElementById('resultado');
-    const duration = document.getElementById('duration');
-    const title = document.getElementById('title');
-    const imgVideo = document.getElementById('imgVideo');
+    const inputJson = document.getElementById('inputJson')
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -17,11 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                duration.textContent = data.duration;
-                title.textContent = data.title;
-                imgVideo.src = data.imgVideo;
-                resultadoDiv.style.display = 'block';
+                inputJson.value = data.json;
             })
             .catch(error => console.error('Error:', error));
     });
