@@ -23,7 +23,7 @@
 <div class="container">
   <div class="row mb-4">
     <div class="col-12">
-      <h1 class="text-center">Converter</h1>
+      <h1 class="text-center">Converter XML e JSON</h1>
     </div>
   </div>
   <form id="converterForm" class="row g-3" method="post" action="converter">
@@ -31,21 +31,28 @@
       <label for="inputXml" class="form-label">XML</label>
       <textarea class="form-control mb-2 textarea-custom" id="inputXml" name="xml" placeholder="Cole seu XML aqui"></textarea>
       <div class="d-flex justify-content-start btn-group mt-2">
-        <button type="button" class="btn btn-secondary btn-custom" onclick="pasteText('inputXml')">Colar</button>
-        <button type="button" class="btn btn-secondary btn-custom" onclick="copyText('inputXml')">Copiar</button>
+        <button type="button" class="btn btn-dark" onclick="pasteText('inputXml')">Colar</button>
+        <button type="button" class="btn btn-info" onclick="copyText('inputXml')">Copiar</button>
       </div>
     </div>
     <div class="col-12 col-md-6">
       <label for="inputJson" class="form-label">JSON</label>
       <textarea class="form-control mb-2 textarea-custom" id="inputJson" name="json" placeholder="Cole seu JSON aqui"></textarea>
       <div class="d-flex justify-content-end btn-group mt-2">
-        <button type="button" class="btn btn-secondary btn-custom" onclick="pasteText('inputJson')">Colar</button>
-        <button type="button" class="btn btn-secondary btn-custom" onclick="copyText('inputJson')">Copiar</button>
+        <button type="button" class="btn btn-dark" onclick="pasteText('inputJson')">Colar</button>
+        <button type="button" class="btn btn-info" onclick="copyText('inputJson')">Copiar</button>
       </div>
     </div>
     <div class="col-auto">
-      <button id="submitButton" type="submit" class="btn btn-primary mb-3">Converter</button>
+      <div class="d-flex align-items-center">
+        <select class="form-select me-2" aria-label="escolha" id="opcao" name="opcao">
+          <option value="1">XML PARA JSON</option>
+          <option value="2">JSON PARA XML</option>
+        </select>
+        <button id="submitButton" type="submit" class="btn btn-primary">Converter</button>
+      </div>
     </div>
+
   </form>
 </div>
 <script src="./botoes.js"></script>

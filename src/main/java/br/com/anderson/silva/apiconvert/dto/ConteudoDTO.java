@@ -8,4 +8,5 @@ import lombok.Setter;
 public class ConteudoDTO {
     private String xml;
     private String json;
+    private Integer opcao;
 }
