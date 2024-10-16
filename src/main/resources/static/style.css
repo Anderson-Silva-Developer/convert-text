@@ -1,7 +1,25 @@
-body {
-    height: 100vh;
-    background:honeydew;
-}
 h1 {
     margin-bottom: 2rem;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(148,156,199);
+    background: linear-gradient(90deg, rgba(148,156,199,1) 0%, rgba(186,95,83,0) 0%, rgba(157,119,84,0.6643032212885154) 100%, rgba(84,181,87,1) 100%);
+}
+
+.textarea-custom {
+    height: 50vh; /* 50% da altura da viewport */
+}
+
+.btn-group {
+    gap: 0.5rem; /* Espaço entre os botões */
+}
+
+.btn-custom {
+    width: 100px;
 }
